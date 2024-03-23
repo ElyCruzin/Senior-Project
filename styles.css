@@ -142,9 +142,6 @@ table {
    --white: #FFFFFF;
    --black: #000000;
 }
-html {
-  background-color: var(--background);
-}
 /* ----- SKIP LINK STYLES ----- */
 /* skip link styles from: https://webaim.org/techniques/css/invisiblecontent/ */
 #skip{
@@ -317,9 +314,7 @@ html {
  .hideitem {
   display: none;
 }
-body {
-  background-color: var(--white);
-}
+
 @media screen and (min-width: 550px) {
   header {
     justify-content: center;
