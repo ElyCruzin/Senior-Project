@@ -79,31 +79,113 @@
             </nav>
         </header>
         <main>
-          <div class="home-grid">
+          <section class="home-grid">
+            <div id="home-div1">
           <p class="main-p">Helping Pet's live their best lives!</p>
+          <a href="services.html" class="button">Book Now!</a>
+        </div>
+        <div id="home-div2">
           <img src="Images/home-1 small.png" class="img-home">
         </div>
-        <section>
-          <h1></h1>
-        </section>
-        <section class="border-sec">
-          <h2>Our Goal</h2>
-          <p>To make the world a more beautiful place, one precious pet at a time.</p>
-          <p>With over 20 years of combined experience we provide excellent care through positve and healthy grooming experiences for every pet.</p>
-          <a href="services.html" class="button">Services</a>
-        </section>
+      </section>
         <section class="green-back">
-          <h2>Voted Best Groomer!</h2>
-          <p>2018-2022</p>
-          <p>We would like to thank Sumter and the surrounding communities for voting us Best Groomer for five years straight!</p>
-        </section>
+            <h2>Services</h2>
+            <div id="services-grid">
+            <div class="service-div">
+              <img src="Images/bath.svg" class="icons">
+              <h3>Full Service Bath</h3>
+              <p>Description.</p>
+              </div>
+            <div class="service-div">
+              <img src="Images/paw.svg" class="icons">
+              <h3>Nail Buffing</h3>
+              <p>Description.</p>      
+            </div>
+            <div class="service-div">
+              <img src="Images/scissors.svg" class="icons">
+              <h3>Haircut</h3>
+              <p>Description.</p>
+            </div>
+          </div>
+            <a href="services.html" class="button">See More</a>
+          </section>
+          <section>
+            <h2>For Pet's Sake</h2>
+            <div id="sake-grid">
+            <div class="sake-div">
+            <img src="Images/pawmetto.png" id="pawmetto">
+            <h3>Mobile Vaccines</h3>
+            <p>We sponsor a care-a-van for mobile pet vaccines. Located outside our parking lot the last Saturday of every month.</p>
+            <a href="https://pawmettolifeline.org/medical-services/care-a-van-mobile-vaccine-clinic/" class="button">Learn More</a>
+          </div>
+          <div class="sake-div">
+            <img src="Images/logo-ars.svg" id="ars">
+            <h3>Shelter Animals</h3>
+            <p>Would you like to help feed animals for free? Its fast and easy through<a href="https://theanimalrescuesite.greatergood.com/">The Animal Rescue Site!</a><p>
+            <a href="https://theanimalrescuesite.greatergood.com/clicktogive/ars/home" class="button">Donate</a>
+        </div>
+      </div>
+          </section>
+                <section id="contact" class="green-back">
+                  <h3>Contact Us <span class="form-required">*</span>required</h3>
+                  <form method="post" action="https://wp.zybooks.com/form-viewer.php">
+                      <div id="names">
+                          <label for="fName">First Name<span class="required">*</span></label>
+                          <input type="text" name="fName" id="fName" autocomplete="given-name" placeholder="First Name" required>
+                          <!-- custom input styles from https://moderncss.dev/custom-css-styles-for-form-inputs-and-textareas/ -->
+                          <label for="lName">Last Name<span class="required">*</span></label>
+                          <input type="text" name="lName" id="lName" autocomplete="family-name" placeholder="Last Name" required>
+                      </div>
+                      <div id="method">
+                          <fieldset>
+                              <legend>Contact Method<span class="required">*</span></legend>
+                              <!-- custom radio button styles from https://moderncss.dev/pure-css-custom-styled-radio-buttons/ -->
+                              <label for="prefEmail">
+                                  <span class="radio-input">
+                                      <input type="radio" name="contactPref" id="prefEmail" required checked>
+                                      <span class="radio-control"></span>
+                                  </span>
+                                  <span class="radio-label">Email</span>
+                              </label>
+                              <label for="prefText">
+                                  <span class="radio-input">
+                                      <input type="radio" name="contactPref" id="prefText">
+                                      <span class="radio-control"></span>
+                                  </span>
+                                  <span class="radio-label">Text</span>
+                              </label>
+                              <label for="prefPhone">
+                                  <span class="radio-input">
+                                      <input type="radio" name="contactPref" id="prefPhone">
+                                      <span class="radio-control"></span>
+                                  </span>
+                                  <span class="radio-label">Phone</span>
+                              </label>
+                          </fieldset>
+                          </div>
+                          <div id="nums">
+                          <label for="email">Email Address<span class="required">*</span></label>
+                          <input type="email" name="email" id="email" autocomplete="email" placeholder="Email Address" required>
+                          <label for="phone">Phone Number<span class="required">*</span></label>
+                          <input type="tel" name="phone" id="phone" autocomplete="tel" placeholder="Phone Number" required>
+                      </div>
+                      <div id="comment">
+                      <label for="comment">Comments</label>
+                          <textarea type="textarea" name="comments" id="comments"  placeholder="Tell us how were doing!"></textarea>
+                      <input type="submit" name="mySubmit" id="mySubmit" value="Submit" class="button">
+                    </div>
+                  </form>
+            <div class="mobile-hide">
+              <img>
+            </div>
+          </section>
         </main>
         <footer>
-          <div>
+          <div id="footer-add">
           <address>1155 North Guignard Dr<br> Sumter, South Carolina, 29150</address>
           <phone>(803) 883-5527</phone>
         </div>
-          <div>
+          <div id="footer-hrs">
             <h3>Hours</h3>
             <p>Weekdays: 8am to 6pm<br>Saturday: 9am to 6pm<br>Sunday: Closed</p>
           </div>

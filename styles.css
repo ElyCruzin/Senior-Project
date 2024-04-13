@@ -241,6 +241,7 @@ table {
     flex-direction: row;
     align-items: center;
     margin-bottom: 10px;
+    
   }
   
   /* Style the navigation bar links */
@@ -249,19 +250,19 @@ table {
     text-align: center;
     padding: 10px 20px;
     text-decoration: none;
+    
   }
   
   /* Change color on hover */
   .navbar a:hover {
     background-color: var(--buttons);
-    border-radius: 2px;
+    border-radius: 20px;
     color: black;
     transition: 0.5s;
   }
   
   /* Add a color to the active/current link */
   .active {
-    border-bottom: solid var(--buttons) 3px;
     transition: 0.5s;
   }
   
@@ -278,7 +279,7 @@ table {
   margin: 0; /* Important for vertical align on mobile phones */
 }
 
-/* Add a red background color to navbar links on hover */
+/* Add a background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: var(--buttons);
 }
@@ -320,13 +321,21 @@ table {
 .home-grid {
   margin-top:20px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   align-items: center;
+  min-height: 400px;
+}
+#home-div2 {
+  grid-row: 1/2;
+  justify-self: center;
+}
+#home-div1 {
+  grid-row: 2/3;
 }
 p {
-margin: 30px;
+margin: 10px;
 text-align: center;
-font-size: 18px;
+font-size: 16px;
 }
 section {
   margin: 30px;
@@ -337,13 +346,19 @@ section {
     font-weight: bold;
     font-family: tahoma;
     color: var(--background);
-    margin: 30px;
+    margin: 24px;
   }
-
+h3 {
+  text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: tahoma;
+    color: var(--black);
+}
 .main-p {
   margin: 20px;
   text-align: center;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 150%;
   font-weight: bold;
   font-family: tahoma;
@@ -372,26 +387,138 @@ margin: 20px auto;
   padding: 20px;
   margin: 20px 0;
 }
-.green-back h2, .green-back p {
+.green-back h2 {
 color: var(--white);
+}
+#services-grid {
+  display:grid;
+  grid-template-columns: 1fr;
+}
+.service-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+  margin: 20px;
+  border-radius: 20px;
+}
+.icons {
+  width: 70px;
+  padding: 20px;
+  margin: 25px 5px;
+  border: solid 2px black;
+  border-radius: 20px;
+}
+.sake-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.sake-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+#pawmetto, #ars {
+  padding:20px;
+}
+#pawmetto {
+  width: 200px;
+}
+#ars {
+  width: 100px;
+}
+.sake-div a {
+  margin: 5px 5px 30px;
+}
+.sake-div p {
+ text-align: left;
+}
+form {
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: auto;
+color: var(--white);
+font-weight: bold;
+}
+#contact h3 {
+  margin: 20px 5px;
+  text-align: left;
+  color: var(--white);
+}
+
+#names, #nums, #method, #comment {
+  grid-column: 1/2;
+}
+label, input, textarea {
+display: block;
+margin: 5px;
+}
+input[type=text], input[type=email], input[type=tel], textarea {
+padding: 6px 10px;
+border-radius: 7px;
+border: none;
+width: 80%;
+}
+fieldset {
+  margin: 10px 0px;
+}
+.radio-label, input[type="radio"] {
+  display: inline-block;
+}
+.required, .form-required {
+  color: var(--buttons);
+}
+/** SERIVICES **/
+#services h2 {
+  color: white;
+}
+.service-div {
+  padding: 20px;
+}
+#services section {
+  background-color: #226e69;
+  padding: 20px;
+}
+/** GALLERY **/
+#gal-grid {
+  display: grid;
+ grid-template-columns:1fr;
+ grid-template-rows: auto;
+ justify-items: center;
+}
+.gal-div img {
+  width: 250px;
+  justify-self: center;
 }
 footer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   background-color: #818181;
+  justify-items: center;
+  align-items: center;
+  padding-top: 20px;
 }
 footer h3, footer p {
-  text-align: center;
   margin: 5px;
 }
-footer div {
-  justify-self: center;
+#footer-add {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  text-align: center;
+  padding: 10px;
+}
+
+#footer-hrs {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding: 10px;
 }
 small {
-  margin: 20px 5px;
   grid-column: 1/3;
   text-align: center;
+  font-style: italic;
 }
 @media screen and (min-width: 550px) {
   header {
@@ -403,6 +530,41 @@ small {
 }
 .mobile-hide {
 display: none;
+}
+.home-grid {
+  grid-template-columns: 1fr 1fr;
+}
+#home-div1 {
+  grid-row: 1/2;
+}
+.service-div {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 30% 70%;
+}
+.service-div img {
+  grid-row:1/3;
+  justify-self: center;
+}
+#gal-grid {
+  grid-template-columns:1fr 1fr;
+}
+.gal-div:first-of-type {
+  grid-column: 1/2;
+}
+.gal-div:nth-of-type(2) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+footer {
+  grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 70px;
+}
+#footer-add {
+grid-row: 1/2;
+}
+#footer-hrs {
+  grid-column: 2/3;
 }
 }
   
