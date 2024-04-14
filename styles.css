@@ -387,7 +387,7 @@ margin: 20px auto;
   padding: 20px;
   margin: 20px 0;
 }
-.green-back h2 {
+.green-back h1, .green-back h2 {
 color: var(--white);
 }
 #services-grid {
