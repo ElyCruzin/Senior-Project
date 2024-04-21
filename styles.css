@@ -340,6 +340,13 @@ font-size: 16px;
 section {
   margin: 30px;
 }
+h1 {
+  font-size: 30px;
+  color: var(--white);
+  font-family: tahoma;
+  font-weight: bold;
+  text-align: center;
+}
   h2 {
     text-align: center;
     font-size: 25px;
@@ -470,15 +477,34 @@ fieldset {
   color: var(--buttons);
 }
 /** SERIVICES **/
+#service-intro h1 {
+  color: var(--background);
+}
 #services h2 {
   color: white;
 }
 .service-div {
   padding: 20px;
 }
-#services section {
+#service-dog, #service-cat, #service-other {
   background-color: #226e69;
   padding: 20px;
+}
+#check-mark {
+  width: 15px;
+  display: inline;
+  margin: none;
+  padding: none;
+}
+.service-descript p{
+  display: inline-block;
+  margin: 10px;
+  padding:none;
+}
+.service-descript {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: left;
 }
 /** GALLERY **/
 #gal-grid {
