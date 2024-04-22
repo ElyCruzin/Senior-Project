@@ -483,6 +483,9 @@ fieldset {
 #services h2 {
   color: white;
 }
+#services h3 {
+  margin-bottom: 20px;
+}
 .service-div {
   padding: 20px;
 }
@@ -498,8 +501,9 @@ fieldset {
 }
 .service-descript p{
   display: inline-block;
-  margin: 10px;
+  margin: 5px;
   padding:none;
+  font-size: 12px;
 }
 .service-descript {
   display: grid;
@@ -516,6 +520,22 @@ fieldset {
 .gal-div img {
   width: 250px;
   justify-self: center;
+}
+
+/** REVIEWS **/
+.star {
+  width: 15px;
+  margin-top: 10px;
+}
+#review-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.review-div {
+display: flex;
+flex-direction: column;
+  align-items: center;
+  margin: 20px;
 }
 footer {
   display: grid;
