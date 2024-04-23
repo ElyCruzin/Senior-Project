@@ -477,8 +477,9 @@ fieldset {
   color: var(--buttons);
 }
 /** SERIVICES **/
-#service-intro h1 {
+ h1 {
   color: var(--background);
+  margin: 20px;
 }
 #services h2 {
   color: white;
@@ -492,6 +493,7 @@ fieldset {
 #service-dog, #service-cat, #service-other {
   background-color: #226e69;
   padding: 20px;
+  margin: 0 0 30px;
 }
 #check-mark {
   width: 15px;
@@ -512,13 +514,15 @@ fieldset {
 }
 /** GALLERY **/
 #gal-grid {
+  margin: 0;
   display: grid;
  grid-template-columns:1fr;
  grid-template-rows: auto;
  justify-items: center;
 }
 .gal-div img {
-  width: 250px;
+  margin: 0;
+  width: 90%;
   justify-self: center;
 }
 
@@ -537,6 +541,25 @@ flex-direction: column;
   align-items: center;
   margin: 20px;
 }
+/** SHOP **/
+.shop-grid {
+  margin: none;
+}
+.shop-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c4c0c0;
+  margin: 20px 0px 10px;
+  padding: 30px 10px 10px;
+  border-radius: 30px;
+}
+.shop-img {
+  width: 150px;
+}
+
+
+/** FOOTER **/
 footer {
   display: grid;
   grid-template-columns: 1fr;
@@ -566,6 +589,7 @@ small {
   text-align: center;
   font-style: italic;
 }
+/** SCREEN OVER 550 **/
 @media screen and (min-width: 550px) {
   header {
     justify-content: center;
