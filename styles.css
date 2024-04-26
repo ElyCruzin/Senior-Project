@@ -571,10 +571,12 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
  grid-template-rows: auto;
  justify-items: center;
 }
+.gal-div {
+  display: flex;
+}
 .gal-div img {
-  margin: 0;
+  margin: 10px auto;
   width: 90%;
-  justify-self: center;
   border-radius: 5px;
   border: solid 2px black;
   box-shadow: 1px 2px 3px 2px rgba(0,0,0,0.4);
