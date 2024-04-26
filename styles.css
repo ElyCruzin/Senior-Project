@@ -141,6 +141,7 @@ table {
    --background: #226e69;
    --white: #FFFFFF;
    --black: #000000;
+   --hover: #e36262;
 }
 /* ----- SKIP LINK STYLES ----- */
 /* skip link styles from: https://webaim.org/techniques/css/invisiblecontent/ */
@@ -164,60 +165,61 @@ table {
   header {
     width: 100%;
     position: sticky;
-    background-color: #226e69;
+    background-color: var(--background);
     display: flex;
     align-items: end;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
   }
   #mobilebtn {
     position: fixed;
-    top:0px;
-    right:0px;
-    background: none;
-    border: none;
+    top:5px;
+    right:20px;
+    background: #226e69ac;
+    border:none;
+    justify-self: center;
+    height:60px;
+    padding:0 10px;
   }
-
   /*** SIDE NAV ***/
   /* The Overlay (background) */
 .overlay {
-  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
   height: 100%;
   width: 0;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  position: fixed; 
+  z-index: 1; 
   left: 0;
   top: 0;
-  background-color: rgb(0,0,0); /* Black fallback color */
-  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.9); 
+  overflow-x: hidden; 
+  transition: 0.5s;
 }
-
-/* Position the content inside the overlay */
 .overlay-content {
   position: relative;
-  top: 25%; /* 25% from the top */
-  width: 100%; /* 100% width */
-  text-align: center; /* Centered text/links */
-  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  top: 25%; 
+  width: 100%; 
+  text-align: center;
+  margin-top: 30px;
 }
-
-/* The navigation links inside the overlay */
 .overlay a {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
   color: #818181;
-  display: block; /* Display block instead of inline */
-  transition: 0.3s; /* Transition effects on hover (color) */
+  display: block; 
+  transition: 0.3s; 
 }
 
-/* When you mouse over the navigation links, change their color */
+/* HOVER */
+button:hover, a:hover, submit:hover{
+background: var(--hover);
+}
+/* OVERLAY HOVER */
 .overlay a:hover, .overlay a:focus {
   color: #f1f1f1;
+  background: none;
 }
-
-/* Position the close button (top right corner) */
+/* Position the close button */
 .overlay .closebtn {
   position: absolute;
   top: 0px;
@@ -225,7 +227,6 @@ table {
   font-size: 55px;
 }
 
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
   .overlay .closebtn {
@@ -243,8 +244,6 @@ table {
     margin-bottom: 10px;
     
   }
-  
-  /* Style the navigation bar links */
   .navbar a, .dropbtn {
     color: #f2f2f2;
     text-align: center;
@@ -252,16 +251,12 @@ table {
     text-decoration: none;
     
   }
-  
-  /* Change color on hover */
   .navbar a:hover {
     background-color: var(--buttons);
     border-radius: 20px;
     color: black;
     transition: 0.5s;
   }
-  
-  /* Add a color to the active/current link */
   .active {
     transition: 0.5s;
   }
@@ -303,13 +298,9 @@ table {
   flex-direction: row;
   text-align: left;
 }
-
-/* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #ddd;
 }
-
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: flex;
   flex-direction: column;
@@ -331,6 +322,7 @@ table {
 }
 #home-div1 {
   grid-row: 2/3;
+  justify-self: center;
 }
 p {
 margin: 10px;
@@ -420,28 +412,32 @@ color: var(--white);
 .sake-grid {
   display: grid;
   grid-template-columns: 1fr;
+
 }
 .sake-div {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 30px;
+  max-width: 300px;
+  justify-self: center;
+  margin: 5px auto;
 }
 #pawmetto, #ars {
   padding:20px;
+  align-self: center;
 }
 #pawmetto {
   width: 200px;
 }
 #ars {
-  width: 100px;
-}
-.sake-div a {
-  margin: 5px 5px 30px;
+  width: 200px;
+  height: 55px;
 }
 .sake-div p {
  text-align: left;
+ padding-bottom: 10px;
 }
+/* FORM */
 form {
 display: grid;
 grid-template-columns: 1fr;
@@ -449,10 +445,15 @@ grid-template-rows: auto;
 color: var(--white);
 font-weight: bold;
 }
-#contact h3 {
+#contact h2 {
   margin: 20px 5px;
   text-align: left;
   color: var(--white);
+  font-weight: bold;
+}
+#required, .form-required {
+  font-size: 16px;
+  font-weight: 300;
 }
 
 #names, #nums, #method, #comment {
@@ -472,7 +473,7 @@ fieldset {
   margin: 10px 0px;
 }
 .radio-label, input[type="radio"] {
-  display: inline-block;
+  display:inline;
 }
 .required, .form-required {
   color: var(--buttons);
@@ -521,7 +522,7 @@ small {
   color: var(--background);
   margin: 20px;
 }
-#service-intro p, #shop-intro p, #gallery-intro p, #reviews-intro p{
+#service-intro p, #shop-intro p, #gal-intro p, #reviews-intro p{
 margin:30px;
 font-size: 20px;
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
@@ -539,6 +540,10 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
   background-color: #226e69;
   padding: 20px;
   margin: 0 0 30px;
+}
+#service-intro img {
+  width: 45vw;
+  
 }
 
 #check-mark {
@@ -560,7 +565,7 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 /** GALLERY **/
 #gal-grid {
-  margin: 0;
+  margin: 50px 0 0 0;
   display: grid;
  grid-template-columns:1fr;
  grid-template-rows: auto;
@@ -570,12 +575,25 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
   margin: 0;
   width: 90%;
   justify-self: center;
+  border-radius: 5px;
+  border: solid 2px black;
+  box-shadow: 1px 2px 3px 2px rgba(0,0,0,0.4);
 }
 
 /** REVIEWS **/
 .star {
   width: 15px;
   margin-top: 10px;
+}
+.review-div div {
+  align-self: center;
+  padding-bottom: 10px;
+  
+}
+#reviews-intro {
+  border-bottom: solid 1px black;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 #review-grid {
   display: grid;
@@ -584,21 +602,37 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 .review-div {
 display: flex;
 flex-direction: column;
-  align-items: center;
+  align-items: space-evenly;
   margin: 20px;
+  padding: 30px 5px 20px;
+  border-radius: 30px;
+  box-shadow: 1px 2px 3px 2px rgba(0,0,0,0.9);
+}
+.review-div p {
+  border-top:solid 1px black;
+  text-align: center;
+  margin: 5px 15px;
+  padding-top:10px;
+  line-height: 20px;
 }
 /** SHOP **/
-.shop-grid {
-  margin: none;
+#shop-intro, #gal-intro, #reviews-intro {
+  margin-top: 50px;
+}
+#shop-grid, #gal-grid {
+  margin: 80px 0 0;
+  border-top: solid 1px black;
+ padding-top: 30px;
 }
 .shop-div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #c4c0c0;
-  margin: 20px 0px 10px;
-  padding: 30px 10px 10px;
+  width: 230px;
+  margin: 20px auto;
+  padding: 30px 5px 20px;
   border-radius: 30px;
+  box-shadow: 1px 2px 3px 2px rgba(0,0,0,0.9);
 }
 .shop-div h3 {
 margin-top: 10px;
@@ -617,6 +651,7 @@ justify-self: center;
 .review-div {
   max-width: 330px;
   justify-self: center;
+  margin: 20px auto;
 }
 
 /** SCREEN OVER 550 **/
@@ -650,9 +685,6 @@ display: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-#gal-grid {
-  grid-template-columns:1fr 1fr;
-}
 .gal-div:first-of-type {
   grid-column: 1/2;
 }
@@ -673,8 +705,7 @@ grid-row: 1/2;
 #footer-hrs {
   grid-column: 2/3;
 }
-
-#shop-grid {
+#shop-grid, #gal-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -684,8 +715,29 @@ grid-row: 1/2;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
+#service-intro img {
+  width: 36vw;
+}
+form {
+  grid-template-columns: 1fr 1fr;
+}
+#method, #comment {
+  grid-column: 2/3;
+}
+#method {
+  grid-row: 1/2;
+}
+textarea {
+  height: 70px;
+}
+#contact h3 {
+  text-align: center;
+}
 }
 @media screen and (min-width: 800px) {
+  nav {
+    margin-bottom: 10px;
+  }
   .service-grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -695,9 +747,82 @@ grid-row: 1/2;
   .service-descript {
     margin-top: 0px;
   }
+  #service-intro img {
+    width: 30vw;
+  }
+  #gal-grid {
+  grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 50px;
+  }
+}
+@media screen and (min-width: 870px) {
+  #shop-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 50px;
+  }
+  #review-grid {
+    grid-template-columns: 1fr 1fr;
+    padding-top: 50px;
+  }
 }
 @media screen and (min-width: 1200px) {
   #shop-grid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#review-grid {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+}
+@media screen and (min-width: 1500px) {
+form {
+  grid-template-columns: 1fr;
+}
+#nums, #method, #comment {
+  grid-column: 1/2;
+}
+#bottom-grid, #top-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin: 0;
+}
+main {
+  margin: 0;
+}
+#sake-sec {
+grid-column: 2/3;
+}
+#contact {
+  grid-row: 1/2;
+border-radius: 0 150px 150px 0;
+margin-bottom: 0px;
+}
+#names {
+  grid-row: 1/2;
+}
+#method {
+  grid-row: 2/3;
+}
+#no-green {
+  background-color: var(--white);
+  margin-bottom: 140px;
+}
+#no-green h2 {
+  color: var(--background);
+}
+#no-green .service-div {
+  box-shadow: 1px 2px 3px 2px rgba(0,0,0,0.9);
+}
+#button-hide {
+  display: none;
+}
+#sake-grid {
+  grid-template-columns: 1fr;
+}
+#gal-grid {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#review-grid {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 }

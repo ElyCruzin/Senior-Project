@@ -79,16 +79,17 @@
             </nav>
         </header>
         <main>
+          <div id="top-grid">
           <section class="home-grid">
             <div id="home-div1">
-          <p class="main-p">Helping Pet's live their best lives!</p>
+          <p class="main-p">Helping Pet's Live Their Best Lives!</p>
           <a href="services.html" class="button">Book Now!</a>
         </div>
         <div id="home-div2">
           <img src="Images/home-1 small.png" class="img-home">
         </div>
       </section>
-        <section class="green-back">
+        <section class="green-back" id="no-green">
             <h2>Services</h2>
             <div class="service-grid">
             <div class="service-div">
@@ -138,9 +139,11 @@
               </div>
             </div>
           </div>
-            <a href="services.html" class="button">See More</a>
+            <a href="services.html" class="button" id="button-hide">See More</a>
           </section>
-          <section>
+        </div>
+          <div id="bottom-grid">
+          <section id="sake-sec">
             <h2>For Pet's Sake</h2>
             <div id="sake-grid">
             <div class="sake-div">
@@ -158,7 +161,7 @@
       </div>
           </section>
                 <section id="contact" class="green-back">
-                  <h3>Contact Us <span class="form-required">*</span>required</h3>
+                  <h2>Contact Us <span class="form-required">*</span><span id="required">required</span></h2>
                   <form method="post" action="https://wp.zybooks.com/form-viewer.php">
                       <div id="names">
                           <label for="fName">First Name<span class="required">*</span></label>
@@ -210,6 +213,7 @@
               <img>
             </div>
           </section>
+        </div>
         </main>
         <footer>
           <div id="footer-add">
