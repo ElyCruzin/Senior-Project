@@ -721,10 +721,10 @@ grid-row: 1/2;
 form {
   grid-template-columns: 1fr 1fr;
 }
-#method, #comment {
+#nums, #comment {
   grid-column: 2/3;
 }
-#method {
+#nums {
   grid-row: 1/2;
 }
 textarea {
