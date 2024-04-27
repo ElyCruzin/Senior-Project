@@ -354,7 +354,7 @@ h3 {
     font-family: tahoma;
     color: var(--black);
 }
-.main-p {
+.home-h1 {
   margin: 20px;
   text-align: center;
   font-size: 24px;
@@ -546,16 +546,13 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
   
 }
 
-#check-mark {
+.check-mark {
   width: 15px;
   display: inline;
-  margin: none;
-  padding: none;
 }
 .service-descript p{
   display: inline-block;
   margin: 5px;
-  padding:none;
   font-size: 12px;
 }
 .service-descript {
@@ -564,6 +561,10 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
   justify-content: left;
 }
 /** GALLERY **/
+#gal-intro {
+  border-bottom: solid 1px black;
+  padding-bottom: 10px;
+}
 #gal-grid {
   margin: 50px 0 0 0;
   display: grid;
@@ -604,7 +605,6 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 .review-div {
 display: flex;
 flex-direction: column;
-  align-items: space-evenly;
   margin: 20px;
   padding: 30px 5px 20px;
   border-radius: 30px;
@@ -621,7 +621,7 @@ flex-direction: column;
 #shop-intro, #gal-intro, #reviews-intro {
   margin-top: 50px;
 }
-#shop-grid, #gal-grid {
+#shop-grid {
   margin: 80px 0 0;
   border-top: solid 1px black;
  padding-top: 30px;
